@@ -1,0 +1,72 @@
+///////////// PCファースト//////////////
+$pc: 992px; // PC
+$tab: 768px; // タブレット
+$sp: 576px;  // スマホ
+
+
+@mixin pc {
+  @media (max-width:($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width:($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width:($sp)) {
+    @content;
+  }
+}
+
+* {
+  word-break: break-word;
+  box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
+  color: currentColor;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p {
+  font-size: clamp(12px, 3vw, 16px);
+  line-height: 1.8;
+}
+
+li {
+  list-style: none;
+  line-height: 1.8;
+  font-size: clamp(12px, 3vw, 16px);
+}
+
+@mixin title-style{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-align: center;
+
+  &::before {
+    content: '';
+    width: 1px;
+    height: 24px;
+    background-color: #000000;
+    margin-right: 30px;
+    transform: rotate(-35deg)
+  }
+
+  &::after {
+    content: '';
+    width: 1px;
+    height: 24px;
+    background-color: #000000;
+    margin-left: 30px;
+    transform: rotate(35deg)
+  }
+}
+
