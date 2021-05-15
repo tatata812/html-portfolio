@@ -20,8 +20,17 @@ $(function () {
   });
 });
 
+//スムーススクロール
+$(".scroll").click(function () {
+  $("body,html").animate({
+      scrollTop: 0 //ページトップまでスクロール
+    },300); //ページトップスクロールの速さ。
+  return false; //親要素へのイベント伝播を止める
+});
 
-//スクロールマジック
+
+
+//スクロールマジック ヘッダーメニュー
 var controller = new ScrollMagic.Controller();
 
 var scene1 = new ScrollMagic.Scene({ triggerElement: '.about', triggerHook: 0.8 })
@@ -31,6 +40,15 @@ var scene1 = new ScrollMagic.Scene({ triggerElement: '.about', triggerHook: 0.8 
   .on("leave", function () {
     $(".nav-about").removeClass("nav-active");
   })
+
+  /////スクロールボタン////////////////////
+  .on("enter", function () {
+    $(".scroll").addClass("show");
+  })
+  .on("leave", function () {
+    $(".scroll").removeClass("show");
+  })
+  /////ここまでスクロールボタン/////////////
 
   // 開発用インジゲーター
   .addIndicators({ name: 'about' })

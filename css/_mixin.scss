@@ -26,6 +26,10 @@ $sp: 576px;  // スマホ
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   display: inline-block;
   color: currentColor;
