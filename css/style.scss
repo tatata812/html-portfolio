@@ -41,6 +41,7 @@
   }
 }
 
+//メインビジュアル
 .top-img {
   width: 96%;
   height: 680px;
@@ -74,6 +75,8 @@ header {
   text-align: center;
   width: 200px;
   z-index: 100;
+  text-shadow: -1px 1px 0 rgba
+  
 
   @include tab {
     width: 100%;
@@ -89,8 +92,6 @@ header {
       justify-content: space-between;
       align-items: center;
     }
-
-
 
     h1 {
       font-size: 28px;
@@ -297,9 +298,14 @@ header {
       align-items: center;
       height: 100%;
 
-      a {
-        margin: 20px 0;
-        color: #fff;
+      .sp-nav-link {
+
+        
+        a {
+          margin: 20px 0;
+          color: #fff;
+          font-size: 16px;
+        }
       }
     }
   }
@@ -333,8 +339,6 @@ header {
     @include tab {
       padding: 80px 0 0 0;
     }
-
-
 
     .about-box {
       max-width: 880px;
