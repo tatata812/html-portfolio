@@ -54,6 +54,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 16px;
+  position: relative;
 
   @include tab {
     background-position: right;
@@ -64,6 +65,51 @@
     height: 400px;
     margin: 8px 2%;
   }
+
+  //スクロールボタン
+  .scrolldown-btn {
+    position: absolute;
+    bottom: 50px;
+    right: calc((100% - (200px + 2%))/2);
+    animation: arrowmove 1s ease-in-out infinite;
+    color: rgb(216, 216, 216);
+    font-weight: bold;
+
+    @include tab{
+      right: 43%;
+     
+    }
+
+    &:before {
+      position: absolute;
+      bottom: -15px;
+      left: 43%;
+      font-family: "Font Awesome 5 Free";
+      content: "\f063";
+      font-weight: 900;
+     
+      
+    }
+  }
+
+
+  @keyframes arrowmove {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(8px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+
+
 }
 
 header {
@@ -78,7 +124,7 @@ header {
   text-align: center;
   width: 200px;
   z-index: 100;
-  
+
 
 
   @include tab {
@@ -564,8 +610,13 @@ header {
       }
 
       .form-body {
-
+        font-size: 12px;
         width: 70%;
+        line-height: 1.5;
+      }
+
+      textarea {
+        height: calc( 1.5em * 4 );
       }
     }
 
@@ -582,7 +633,7 @@ header {
       border-style: none;
       border-bottom: solid 2px rgba(14, 13, 13, 0.678);
       border-radius: 3px;
-      
+
 
       &:active {
         /*ボタンを押したとき*/
@@ -617,15 +668,15 @@ header {
   text-align: center;
   transition: all 0.5s linear;
 
- i {
-   font-size: 24px;
-  color: rgb(109, 108, 108);
-  display: inline-block;
-  line-height: 20px;
-  
- }
-    
-  
+  i {
+    font-size: 24px;
+    color: rgb(109, 108, 108);
+    display: inline-block;
+    line-height: 20px;
+
+  }
+
+
   //.showがつくと表示
   &.show {
     visibility: visible;
