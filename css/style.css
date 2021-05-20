@@ -544,12 +544,22 @@ header .sp-nav ul .sp-nav-link a {
           transform: rotate(35deg);
 }
 
+.about .about-box-right .about-list-icon {
+  margin: 0 0 16px 0;
+}
+
 .about .about-box-right .about-list-icon:before {
   font-family: "Font Awesome 5 Free";
   content: '\f00c';
   font-weight: 900;
   margin: 0 10px 0 0;
   color: #6d6c6c;
+}
+
+.about .about-box-right .about-list-icon span {
+  display: block;
+  font-size: clamp(10px, 3vw, 12px);
+  margin: 0 0 0 30px;
 }
 
 .work {
