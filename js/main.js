@@ -11,8 +11,8 @@ $(function () {
 
   //ハンバーガーメニュー
   $(".burger-btn,.sp-nav-link").on("click", function () {
-    $(".burger-btn").toggleClass("active");
-    if ($(".burger-btn").hasClass("active")) {
+    $(".burger-btn span").toggleClass("active");
+    if ($(".burger-btn span").hasClass("active")) {
       $(".sp-nav").addClass("active");
     } else {
       $(".sp-nav").removeClass("active");
