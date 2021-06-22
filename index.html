@@ -1,182 +1,224 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tatsumi Seisaku</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    />
+    <link rel="stylesheet" href="css/html5reset-1.6.1.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <!-- ScrollMagicのデバッグインジケータプラグイン -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Tatsumi Seisaku </title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  <link rel="stylesheet" href="css/html5reset-1.6.1.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-  <!-- ScrollMagicのデバッグインジケータプラグイン -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-</head>
-
-<body>
-  <!-- ローディングアニメ -->
-  <div class="loading-anime-wrap">
-    <p class="loading-anime-text">Tatsumi&nbsp;Seisaku</p>
-    <div class="loading-anime-line"></div>
-  </div>
-
-<!-- メインビジュアル -->
-  <div class="top-img"><div class="scrolldown-btn">Scroll</div></div>
-
-  <header>
-    <nav class="pc-nav">
-      <a href="#">
-        <h1>Tatumi<span>Seisaku's</span><span class="h1-fontsize">portfolio</span></h1>
-      </a>
-      <ul>
-        <li><a href="#about" class="nav-about">about</a></li>
-        <li><a href="#work" class="nav-work">work</a></li>
-        <li><a href="#contact" class="nav-contact">contact</a></li>
-      </ul>
-    </nav>
-    <nav class="sp-nav">
-      <ul>
-        <li class="sp-nav-link"><a href="#about">about</a></li>
-        <li class="sp-nav-link"><a href="#work">work</a></li>
-        <li class="sp-nav-link"><a href="#contact">contact</a></li>
-      </ul>
-    </nav>
-    
-    <!-- ハンバーガーメニュー -->
-    <div class="burger-btn">
-      <span></span>
+  <body>
+    <!-- ローディングアニメ -->
+    <div class="loading-anime-wrap">
+      <p class="loading-anime-text">Tatsumi&nbsp;Seisaku</p>
+      <div class="loading-anime-line"></div>
     </div>
 
-  </header>
+    <!-- メインビジュアル -->
+    <div class="top-img"><div class="scrolldown-btn">Scroll</div></div>
 
-
-  <section class="about" id="about">
-    <div class="about-box-left"></div>
-    <div class="about-box-right">
-      <div class="about-box">
-        <h3 class="about-title">私達について</h3>
-        <p class="about-text">ご覧いただきありがとうございます。<br>
-          WordPressを極めようとしている夫と、 コーディングが大好きな妻でWEBサイト制作をしています。<br>
-        2人とも医療従事者として10年以上責任をもって勤務してきました。<br>好きが高じて、現在妻は専従でWEB制作を担っています。主に企業様から、LP制作やWordPressのテーマ作成・カスタマイズ等のお仕事をいただいています。</p>
-      </div>
-      <div class="about-box">
-        <h3 class="about-title">対応可能な業務</h3>
-        <div class="about-text">
-          <ul>
-            <li class="about-list-icon">得意とする業務は、コーディングです。
-              <span>どの幅でも崩れないレスポンシブ対応可能です。</span>
-              <span>動きのある使いやすいページを制作します。</span></li>
-              
-            <li class="about-list-icon">WordPressはオリジナルテーマ作成可能です。既存テーマのカスタマイズも承っています。</li>
-            <li class="about-list-icon">デザインからサイト公開まで</li>
-            <li class="about-list-icon">WordPressはオリジナルテーマ作成可能です。既存テーマのカスタマイズも承っています。</li>
-            <li class="about-list-icon">納期の目安チェック項目</li>
-          </ul>
-        </div>
-      </div>
-      <div class="about-box about-box-last">
-        <h3 class="about-title">お約束</h3>
-        <div class="about-text">
-          <ul>
-            <li class="about-list-icon">当たり前の事ですが、社会人として当たり前のマナーをわきまえて対応させていただきます。</li>
-            <li class="about-list-icon">平日は３時間以内に返信します。</li>
-            <li class="about-list-icon">報連相をおこたりません。</li>
-            <li class="about-list-icon">何でも気軽に相談できる関係を築いていける努力をします。納得いくまでご相談下さい。</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="work" id="work">
-    <div class="work-inner">
-      <h3 class="work-title">実績紹介</h3>
-      <div class="card-wrap">
-        <a class="card">
-          <div class="card-img-wrap">
-            <img src="https://dl.dropbox.com/s/r8zf5stwmw5juag/kousuke2.png?dl=0" alt="祥太の写真" class="main-contents-img">
-          </div>
-          <div class="card-body">
-            <h3>タイトル</h3>
-            <p>【制作期間】４日<br>
-              【使用技術】HTML・SCSS・jQuery・Bootstrap・PHP<br>
-              【説明】
-              クラウドワークスで受注させていただいた案件です。（サイトはまだ公開されていません。）
-              WordPressテーマlightning proをカスタマイズして制作しています。
-              デザインから担当させていただきました。
-            </p>
-          </div>
+    <header>
+      <nav class="pc-nav">
+        <a href="#">
+          <h1>
+            Tatumi<span>Seisaku's</span
+            ><span class="h1-fontsize">portfolio</span>
+          </h1>
         </a>
-        <a class="card">
-          <div class="card-img-wrap">
-            <img src="https://dl.dropbox.com/s/r8zf5stwmw5juag/kousuke2.png?dl=0" alt="祥太の写真" class="main-contents-img">
-          </div>
-          <div class="card-body">
-            <h3>タイトル</h3>
-            <p>【制作期間】４日<br>
-              【使用技術】HTML・SCSS・jQuery・Bootstrap・PHP<br>
-              【説明】
-              クラウドワークスで受注させていただいた案件です。（サイトはまだ公開されていません。）
-              WordPressテーマlightning proをカスタマイズして制作しています。
-              デザインから担当させていただきました。
-            </p>
-          </div>
-        </a>
-        <a class="card">
-          <div class="card-img-wrap">
-            <img src="https://dl.dropbox.com/s/r8zf5stwmw5juag/kousuke2.png?dl=0" alt="祥太の写真" class="main-contents-img">
-          </div>
-          <div class="card-body">
-            <h3>タイトル</h3>
-            <p>【制作期間】４日<br>
-              【使用技術】HTML・SCSS・jQuery・Bootstrap・PHP<br>
-              【説明】
-              クラウドワークスで受注させていただいた案件です。（サイトはまだ公開されていません。）
-              WordPressテーマlightning proをカスタマイズして制作しています。
-              デザインから担当させていただきました。
-            </p>
-          </div>
-        </a>
+        <ul>
+          <li><a href="#about" class="nav-about">about</a></li>
+          <li><a href="#work" class="nav-work">work</a></li>
+          <li><a href="#contact" class="nav-contact">contact</a></li>
+        </ul>
+      </nav>
+      <nav class="sp-nav">
+        <ul>
+          <li class="sp-nav-link"><a href="#about">about</a></li>
+          <li class="sp-nav-link"><a href="#work">work</a></li>
+          <li class="sp-nav-link"><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- ハンバーガーメニュー -->
+      <div class="burger-btn">
+        <span></span>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <section class="contact" id="contact">
-    <div class="contact-inner">
-      <h3 class="contact-title">お問合わせ</h3>
-      <form
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdKQxz0QmAchfsUOrezGNQCEsDoDUDJdqa1ey8RGw8sHUPFaA/formResponse?embedded=true"
-        target="_self" method="POST">
-        <div class="form-item">
-          <p class="form-title">お名前<span>必須</span></p>
-          <input name="entry.2005620554" type="text" required="required" class="form-body">
+    <section class="about" id="about">
+      <div class="about-box-left"></div>
+      <div class="about-box-right">
+        <div class="about-box">
+          <h3 class="about-title">私達について</h3>
+          <p class="about-text">
+            ご覧いただきありがとうございます。<br
+            >
+            夫婦でWEBサイト制作をしています。
+            制作会社様等からLP制作やWordPressのテーマ作成・カスタマイズ等の依頼をいただいています。<br />
+            クラウドワークス マイページ→
+            <a href="https://crowdworks.jp/public/employees/4023065">https://crowdworks.jp/public/employees/4023065<a>
+          </p>
         </div>
-        <div class="form-item">
-          <p class="form-title">メールアドレス<span>必須</span></p>
-          <input name="entry.1045781291" type="text" required="required" class="form-body">
-        </div>
-        <div class="form-item">
-          <p class="form-title">電話番号</p>
-          <input name="entry.1166974658" type="text" class="form-body">
-        </div>
-        <div class="form-item">
-          <p class="form-title">お問い合わせ内容<span>必須</span></p>
-          <textarea name="entry.839337160" required class="form-body"></textarea>
-        </div>
-        <input type="submit" class="form-btn">
-      </form>
-    </div>
-  </section>
+        <div class="about-box">
+          <h3 class="about-title">対応可能な業務</h3>
+          <div class="about-text">
+            <ul>
+              <li class="about-list-icon">
+                得意とする業務は、コーディングです。
+                <span>どの幅でも崩れないレスポンシブ対応可能です。</span>
+                <span>動きのある使いやすいページを制作します。</span>
+              </li>
 
-  <!-- スクロールボタン -->
-  <div class="scroll"><i class="fas fa-angle-double-up"></i></div>
+              <li class="about-list-icon">
+                WordPressはオリジナルテーマ作成可能です。既存テーマのカスタマイズも承っています。
+              </li>
+              <li class="about-list-icon">デザインからサイト公開まで</li>
+              <li class="about-list-icon">
+                WordPressはオリジナルテーマ作成可能です。既存テーマのカスタマイズも承っています。
+              </li>
+              <li class="about-list-icon">納期の目安チェック項目</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about-box about-box-last">
+          <h3 class="about-title">お約束</h3>
+          <div class="about-text">
+            <ul>
+              <li class="about-list-icon">
+                当たり前の事ですが、社会人として当たり前のマナーをわきまえて対応させていただきます。
+              </li>
+              <li class="about-list-icon">平日は３時間以内に返信します。</li>
+              <li class="about-list-icon">報連相をおこたりません。</li>
+              <li class="about-list-icon">
+                何でも気軽に相談できる関係を築いていける努力をします。納得いくまでご相談下さい。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; たつみ制作 2021</p>
-  </footer>
-  <script src="js/main.js"></script>
-</body>
+    <section class="work" id="work">
+      <div class="work-inner">
+        <h3 class="work-title">実績紹介</h3>
+        <div class="card-wrap">
+          <a href="http://tatata812.wp.xdomain.jp/" class="card">
+            <div class="card-img-wrap">
+              <img
+                src="img/hospital-img.jpg"
+                alt="ワードプレステーマの画像"
+                class="main-contents-img"
+              />
+            </div>
+            <div class="card-body">
+              <h3>オリジナルWordPressテーマ</h3>
+              <p>【使用技術】HTML・SCSS・jQuery・PHP</p>
+              <p />
+              <p>
+                既存サイトのデザインを参考にして作成したオリジナルのWordPressテーマです。<br />
+                ０からテーマ作成が可能で、ヒアリングから必要な機能を実装します。
+              </p>
+            </div>
+          </a>
+          <a href="http://tatata812.html.xdomain.jp/" class="card">
+            <div class="card-img-wrap">
+              <img
+                src="img/wasyoku-img.jpg"
+                alt="和食料理店の画像"
+                class="main-contents-img"
+              />
+            </div>
+            <div class="card-body">
+              <h3>架空の和食店サイト</h3>
+              <p>【使用技術】HTML・SCSS・jQuery</p>
+              <p>
+                どの幅でも崩れないレスポンシブ対応を心がけています。<br />
+                アニメーションで動きのあるサイトも制作可能です。
+              </p>
+            </div>
+          </a>
+          <a href="img/design-img2.jpg" target="_blank" class="card">
+            <div class="card-img-wrap">
+              <img
+                src="img/design-img2.jpg"
+                alt="採用サイトデザインの画像"
+                class="main-contents-img"
+              />
+            </div>
+            <div class="card-body">
+              <h3>IT企業採用サイトのデザイン</h3>
+              <p>【使用ツール】AdobeXD・Photoshop</p>
+              <p>
+                「落ち着いたイメージ」<br />
+                「仕事のやりがいと働きやすい職場である事をアピールしたい」<br />
+                という希望を受け、作成しました。<br />
+                働きやすい職場である事を求職者に伝える要素を見やすく配置しました。
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <h3 class="contact-title">お問合わせ</h3>
+        <form
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdKQxz0QmAchfsUOrezGNQCEsDoDUDJdqa1ey8RGw8sHUPFaA/formResponse?embedded=true"
+          target="_self"
+          method="POST"
+        >
+          <div class="form-item">
+            <p class="form-title">お名前<span>必須</span></p>
+            <input
+              name="entry.2005620554"
+              type="text"
+              required="required"
+              class="form-body"
+            />
+          </div>
+          <div class="form-item">
+            <p class="form-title">メールアドレス<span>必須</span></p>
+            <input
+              name="entry.1045781291"
+              type="text"
+              required="required"
+              class="form-body"
+            />
+          </div>
+          <div class="form-item">
+            <p class="form-title">電話番号</p>
+            <input name="entry.1166974658" type="text" class="form-body" />
+          </div>
+          <div class="form-item">
+            <p class="form-title">お問い合わせ内容<span>必須</span></p>
+            <textarea
+              name="entry.839337160"
+              required
+              class="form-body"
+            ></textarea>
+          </div>
+          <input type="submit" class="form-btn" />
+        </form>
+      </div>
+    </section>
+
+    <!-- スクロールボタン -->
+    <div class="scroll"><i class="fas fa-angle-double-up"></i></div>
+
+    <footer>
+      <p>&copy; たつみ制作 2021</p>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>

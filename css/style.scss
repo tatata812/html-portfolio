@@ -5,30 +5,29 @@
 //ローディングアニメ
 .loading-anime-wrap {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
   top: 0px;
   left: 0px;
-  background: rgba(0, 0, 0, 0.89);
   z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.89);
 
   .loading-anime-text {
-    color: #fff;
-    text-shadow: 1px -1px 0 rgba(0, 0, 0, 1);
-    font-size: clamp(12px, 3vw, 20px);
     position: absolute;
     top: 50%;
     left: 50%;
+    color: #ffffff;
+    text-shadow: 1px -1px 0 rgba(0, 0, 0, 1);
+    font-size: clamp(12px, 3vw, 20px);
     transform: translate(-50%, -50%);
-
   }
 
   .loading-anime-line {
-    background-color: #fff;
-    width: 100%;
-    height: 1px;
     position: absolute;
     top: 60%;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
     transform: scale(0, 1);
     animation: example 1s ease 0.3s 1 forwards;
   }
@@ -46,49 +45,46 @@
 
 //メインビジュアル
 .top-img {
+  position: relative;
+  margin: 24px 2%;
   width: 96%;
   height: 680px;
-  margin: 24px 2%;
+  border-radius: 16px;
   background-image: url(../img/top.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 16px;
-  position: relative;
 
-  @include tab {
+@include tab {
     background-position: right;
   }
 
-  @include sp {
-    background-size: auto 400px;
-    height: 400px;
+@include sp {
     margin: 8px 2%;
+    height: 400px;
+    background-size: auto 400px;
   }
 
   //スクロールボタン
   .scrolldown-btn {
     position: absolute;
-    bottom: 50px;
     right: calc((100% - (200px + 2%))/2);
-    animation: arrowmove 1s ease-in-out infinite;
+    bottom: 50px;
     color: rgb(216, 216, 216);
     font-weight: bold;
+    animation: arrowmove 1s ease-in-out infinite;
 
-    @include tab{
+@include tab {
       right: 43%;
-     
     }
 
     &:before {
       position: absolute;
       bottom: -15px;
       left: 43%;
-      font-family: "Font Awesome 5 Free";
       content: "\f063";
       font-weight: 900;
-     
-      
+      font-family: "Font Awesome 5 Free";
     }
   }
 
@@ -106,28 +102,22 @@
       transform: translateY(0);
     }
   }
-
-
-
-
 }
 
 header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
+  width: 200px;
   width: 200px;
   height: 100vh;
   background-color: rgba(240, 240, 240, 0.8);
   text-align: center;
-  width: 200px;
-  z-index: 100;
 
-
-
-  @include tab {
+@include tab {
     width: 100%;
     height: 80px;
   }
@@ -136,55 +126,54 @@ header {
   .pc-nav {
     text-shadow: -1px 1px 0 rgba(255, 255, 255, 1);
 
-    @include tab {
-      width: 100%;
+@include tab {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      width: 100%;
     }
 
     h1 {
-      font-size: 28px;
       position: absolute;
       top: 25%;
       left: 50%;
-      transform: translateX(-50%);
       width: 200px;
+      font-size: 28px;
+      transform: translateX(-50%);
 
-      @include tab {
-        font-size: 20px;
+@include tab {
         position: static;
-        transform: translateX(0);
-        width: auto;
         padding-left: 16px;
+        width: auto;
+        font-size: 20px;
+        transform: translateX(0);
       }
 
-      @include sp {
+@include sp {
         font-size: 16px;
       }
-
 
       span {
         display: block;
         margin-top: 16px;
 
-        @include tab {
+@include tab {
           display: inline;
           margin-left: 16px;
         }
 
-        @include sp {
-          font-size: 16px;
+@include sp {
           margin-left: 8px;
+          font-size: 16px;
         }
       }
 
       .h1-fontsize {
         font-size: 18px;
 
-        @include sp {
-          font-size: 16px;
+@include sp {
           margin-left: 8px;
+          font-size: 16px;
         }
       }
     }
@@ -194,51 +183,46 @@ header {
       position: absolute;
       top: 58%;
       left: 50%;
-      transform: translateX(-50%);
       width: 200px;
+      transform: translateX(-50%);
 
-
-      @include tab {
+@include tab {
         position: static;
         display: flex;
-        transform: translateX(0);
-        width: auto;
         margin: 0 16px 0 0;
-
+        width: auto;
+        transform: translateX(0);
       }
 
-      @include sp {
+@include sp {
         display: none;
       }
 
       li {
         margin: 0 0 24px 0;
-        font-size: 16px;
         color: rgba(128, 128, 128, 0.678);
+        font-size: 16px;
 
-
-        @include tab {
+@include tab {
           margin: 0 16px 0 0;
-
         }
 
         a {
           transition: 0.5s;
 
-          @include tab {
+@include tab {
             margin: 8px 0;
           }
 
-
           &:hover {
-            color: #000;
-            font-size: 40px;
+            color: #000000;
             font-weight: 900;
+            font-size: 40px;
             transition: 0.5s;
 
-            @include tab {
-              font-size: 24px;
+@include tab {
               margin: 0;
+              font-size: 24px;
             }
           }
         }
@@ -249,14 +233,13 @@ header {
   //ハンバーガーメニュー
   .burger-btn {
     position: relative;
-    display: block;
-    width: 25px; //長さ
-    height: 21px;
-    margin: 0 16px 0 auto;
-    display: none;
     z-index: 10;
+    display: block;
+    display: none;
+    margin: 0 16px 0 auto;
+    width: 25px; //長さ  height: 21px;
 
-    @include sp {
+@include sp {
       display: block;
     }
 
@@ -266,35 +249,32 @@ header {
       top: 50%;
       left: 0;
       display: block;
-      width: 100%; //長さ
-      height: 2px; //太さ
-      background-color: #000; //色
-      transform: translateY(-50%);
+      width: 100%; //長さ  height: 2px; //太さ  background-color: #000000; //色  transform: translateY(-50%);
     }
 
     //上の線
     &:before {
-      content: "";
-      display: block;
       position: absolute;
       top: 0;
       left: 0;
+      display: block;
       width: 100%;
       height: 2px;
-      background-color: #000;
+      background-color: #000000;
+      content: "";
       transition: 0.3s;
     }
 
     //下の線
     &:after {
-      content: "";
-      display: block;
       position: absolute;
       bottom: 0;
       left: 0;
+      display: block;
       width: 100%;
       height: 2px;
-      background-color: #000;
+      background-color: #000000;
+      content: "";
       transition: 0.3s;
     }
 
@@ -306,53 +286,53 @@ header {
 
       &:before {
         top: 50%;
+        background-color: #ffffff;
         transform: translateY(-50%);
         transform: rotate(45deg);
-        background-color: #fff;
       }
 
       &:after {
         top: 50%;
+        background-color: #ffffff;
         transform: translateY(-50%);
         transform: rotate(-45deg);
-        background-color: #fff;
       }
     }
   }
 
   //スマホナビ
   .sp-nav {
-    display: none;
-    z-index: 1;
     position: fixed;
     bottom: 100vh;
     left: 0;
+    z-index: 1;
+    display: none;
+    width: 100%;
     width: 100%;
     height: 100vh;
-    width: 100%;
     background: rgba(0, 0, 0, 0.8);
     transition: all 0.5s ease-in-out;
+
+@include sp {
+      display: block;
+    }
 
     &.active {
       bottom: 0;
     }
 
-    @include sp {
-      display: block;
-    }
-
     ul {
-      padding: 0;
       display: flex;
+      align-items: center;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      padding: 0;
       height: 100%;
 
       .sp-nav-link {
         a {
           margin: 20px 0;
-          color: #fff;
+          color: #ffffff;
           font-size: 16px;
         }
       }
@@ -363,20 +343,24 @@ header {
 //about
 
 .about {
-  margin: 18px;
   display: flex;
+  margin: 18px;
   color: rgb(59, 59, 59);
-
 
   @include tab {
     display: block;
   }
 
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .about-box-left {
     width: 200px;
 
-
-    @include tab {
+@include tab {
       width: 0;
     }
   }
@@ -385,50 +369,47 @@ header {
     flex: 1;
     padding: 120px 0 0 0;
 
-    @include tab {
+@include tab {
       padding: 80px 0 0 0;
     }
 
     .about-box {
-      max-width: 800px;
       margin: 0 auto 120px;
+      max-width: 800px;
 
-      @include tab {
+@include tab {
         margin: 0 auto 64px;
       }
     }
 
     .about-box-last {
-
       @include tab {
         margin: 0 auto;
-
       }
     }
 
     .about-title {
-      text-align: center;
       margin: 0 0 40px 0;
+      text-align: center;
 
-      @include title-style();
-
+@include title-style();
     }
 
     .about-list-icon {
       margin: 0 0 16px 0;
 
       &:before {
-        font-family: "Font Awesome 5 Free";
-        content: '\f00c';
-        font-weight: 900;
         margin: 0 10px 0 0;
         color: rgb(109, 108, 108);
+        content: "\f00c";
+        font-weight: 900;
+        font-family: "Font Awesome 5 Free";
       }
 
       span {
         display: block;
-        font-size: clamp(10px, 3vw, 12px);
         margin: 0 0 0 30px;
+        font-size: clamp(10px, 3vw, 12px);
       }
     }
   }
@@ -446,14 +427,14 @@ header {
   .work-inner {
     margin-left: 200px;
 
-    @include tab {
+@include tab {
       margin-left: 0;
     }
 
-
     .work-title {
-      @include title-style();
       margin: 0 0 40px 0;
+
+@include title-style();
     }
   }
 }
@@ -465,29 +446,20 @@ header {
 
 
 
-  &>.card {
-    width: calc(100% / 3 - 128px / 3);
+  .card {
     /*(100% / カード数 - 余白の合計 / カード数)*/
     margin-right: 64px;
-    /*余白*/
+
+/*余白*/
     margin-bottom: 30px;
+    width: calc(100% / 3 - 128px / 3);
 
-
-    &:nth-child(3n
-
-      /*カード数*/
-    ) {
-      margin-right: 0;
-      /*右端の余白をなくす*/
-    }
-
-
-    @include pc {
+@include pc {
       width: calc(100% / 2 - 64px / 2);
 
       &:nth-child(3n
 
-        /*カード数*/
+      /*カード数*/
       ) {
         margin-right: 64px;
         /*打ち消すためのコード*/
@@ -495,33 +467,38 @@ header {
 
       &:nth-child(2n
 
-        /*カード数*/
+      /*カード数*/
       ) {
         margin-right: 0;
         /*右端の余白をなくす*/
       }
     }
 
-    @include sp {
-      width: 100%;
+@include sp {
       margin-right: 0;
+      width: 100%;
 
       &:nth-child(3n
 
-        /*カード数*/
+      /*カード数*/
       ) {
         margin-right: 0;
         /*打ち消すためのコードを打ち消す*/
       }
-
-
     }
 
+    &:nth-child(3n
+
+    /*カード数*/
+    ) {
+      margin-right: 0;
+      /*右端の余白をなくす*/
+    }
   }
 
   .card {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     display: block;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
     &:hover {
       opacity: 0.7;
@@ -533,33 +510,36 @@ header {
 
     .card-img-wrap {
       position: relative;
-      padding-top: 64%;
       overflow: hidden;
+      padding-top: 64%;
+      border-bottom: 1px dotted #8b8b8b;
+
 
       img {
         position: absolute;
         top: 50%;
         width: 100%;
-        transform: translateY(-50%) scale(1);
         transition: 0.3s ease-in-out;
+        transform: translateY(-50%) scale(1);
       }
     }
 
     .card-body {
-      padding: 16px;
+      padding: 24px 16px;
 
-      &>*:last-child {
+      & > *:last-child {
         margin-bottom: 0;
         /*s最後の要素のマージンボトムをなくす*/
       }
 
       h3 {
-        font-size: 24px;
         margin-bottom: 16px;
+        font-size: 20px;
       }
 
       p {
-        margin-bottom: 16px;
+        margin-bottom: 8px;
+        line-height: 1.5;
       }
     }
   }
@@ -575,50 +555,48 @@ header {
   .contact-inner {
     margin-left: 200px;
 
-    @include tab {
+@include tab {
       margin-left: 0;
     }
 
-
     .contact-title {
-      @include title-style();
       margin: 0 0 40px 0;
 
+@include title-style();
     }
   }
 
   form {
-
     width: 100%;
 
     .form-item {
-      max-width: 480px;
-      width: 100%;
-      margin: 0 auto;
       display: flex;
       align-items: center;
+      margin: 0 auto;
       margin: 0 auto 24px;
+      max-width: 480px;
+      width: 100%;
 
       .form-title {
+        padding: 0 16px 0 0;
         min-width: 170px;
         width: 25%;
-        font-size: 14px;
         text-align: right;
-        padding: 0 16px 0 0;
+        font-size: 14px;
 
         span {
-          background-color: rgba(68, 67, 67, 0.678);
-          font-size: 12px;
-          color: #fff;
+          margin: 0 0 0 8px;
           padding: 2px;
           border-radius: 2px;
-          margin: 0 0 0 8px;
+          background-color: rgba(68, 67, 67, 0.678);
+          color: #ffffff;
+          font-size: 12px;
         }
       }
 
       .form-body {
-        font-size: 12px;
         width: 70%;
+        font-size: 12px;
         line-height: 1.5;
       }
 
@@ -630,26 +608,28 @@ header {
 
     .form-btn {
       display: block;
-      width: 240px;
       margin: 24px auto;
       padding: 0.5em 1em;
-      text-decoration: none;
-      background: rgba(68, 67, 67, 0.678);
-      /*ボタン色*/
-      color: #FFF;
+      width: 240px;
       border-style: none;
       border-bottom: solid 2px rgba(14, 13, 13, 0.678);
       border-radius: 3px;
+      background: rgba(68, 67, 67, 0.678);
 
+/*ボタン色*/
+      color: #ffffff;
+      text-decoration: none;
 
       &:active {
-        /*ボタンを押したとき*/
-        -webkit-transform: translateY(2px);
-        transform: translateY(2px);
-        /*下に動く*/
-        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
         /*影を小さく*/
         border-bottom: none;
+
+/*下に動く*/
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+
+/*ボタンを押したとき*/
+        -webkit-transform: translateY(2px);
+                transform: translateY(2px);
       }
     }
   }
@@ -657,30 +637,31 @@ header {
 
 
 .scroll {
-  //通常は非表示
-  visibility: hidden;
-  opacity: 0;
-  transform: scale(0.5, 0.5);
   //出現させる場所
   position: fixed;
-  bottom: 20px;
   right: 20px;
-  //スタイリング
+  bottom: 20px;
+
+//スタイリング
   display: inline-block;
-  background-color: rgba(238, 238, 238, 0.692);
+
+//通常は非表示
+  visibility: hidden;
   padding: 8px;
   width: 40px;
   height: 40px;
   border-radius: 20px;
+  background-color: rgba(238, 238, 238, 0.692);
   text-align: center;
+  opacity: 0;
   transition: all 0.5s linear;
+  transform: scale(0.5, 0.5);
 
   i {
-    font-size: 24px;
-    color: rgb(109, 108, 108);
     display: inline-block;
+    color: rgb(109, 108, 108);
+    font-size: 24px;
     line-height: 20px;
-
   }
 
 
@@ -694,9 +675,9 @@ header {
 
 
 footer {
-  font-size: 9px;
   margin: 80px 8px 0 0;
   text-align: right;
+  font-size: 9px;
 
   p {
     display: inline-block;
@@ -707,13 +688,12 @@ footer {
 
 //scrollMagic ナビのアニメーション
 .nav-active {
-  color: #000;
-  font-size: 40px;
+  color: #000000;
   font-weight: 900;
+  font-size: 40px;
 
-
-  @include tab {
-    font-size: 24px;
+@include tab {
     margin: 0;
+    font-size: 24px;
   }
 }
