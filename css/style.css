@@ -507,10 +507,8 @@ header .sp-nav ul .sp-nav-link a {
   }
 }
 
-@media (max-width: 768px) {
-  .about .about-box-right .about-box-last {
-    margin: 0 auto;
-  }
+.about .about-box-right .about-box .text-normal {
+  font-weight: normal;
 }
 
 .about .about-box-right .about-title {
@@ -550,7 +548,8 @@ header .sp-nav ul .sp-nav-link a {
 }
 
 .about .about-box-right .about-list-icon {
-  margin: 0 0 16px 0;
+  margin: 0 0 24px 0;
+  font-weight: bold;
 }
 
 .about .about-box-right .about-list-icon:before {
@@ -563,8 +562,9 @@ header .sp-nav ul .sp-nav-link a {
 
 .about .about-box-right .about-list-icon span {
   display: block;
-  margin: 0 0 0 30px;
+  margin: 0 0 0 54px;
   font-size: clamp(10px, 3vw, 12px);
+  font-weight: normal;
 }
 
 .work {
