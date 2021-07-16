@@ -17,7 +17,7 @@ $(function () {
       $(".sp-nav").removeClass("active");
     }
   });
-});
+
 
 //スムーススクロール
 $(".scroll").click(function () {
@@ -94,3 +94,13 @@ var scene3 = new ScrollMagic.Scene({
   })
   // .addIndicators({ name: 'contact' })
   .addTo(controller);
+
+if(matchMedia('(min-width: 768px)').matches){
+  luxy.init({
+    wrapper: '#luxy',
+    targets : '.luxy-el',
+    wrapperSpeed:  0.1
+  });
+} 
+
+});

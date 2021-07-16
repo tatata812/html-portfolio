@@ -112,7 +112,7 @@ header {
   width: 200px;
   width: 200px;
   height: 100vh;
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
 
   @include tab {
@@ -302,7 +302,7 @@ header {
   //スマホナビ
   .sp-nav {
     position: fixed;
-    bottom: 100vh;
+    bottom: 200vh;
     left: 0;
     z-index: 1;
     display: none;
@@ -367,6 +367,7 @@ header {
   .about-box-right {
     flex: 1;
     padding: 120px 0 0 0;
+    position: relative;
 
     @include tab {
       padding: 80px 0 0 0;
@@ -375,7 +376,6 @@ header {
     .about-box {
       margin: 0 auto 120px;
       max-width: 800px;
-
 
       @include tab {
         margin: 0 auto 64px;
@@ -412,8 +412,61 @@ header {
       }
     }
 
+    #luxy {
 
+      z-index: -100;
 
+      img {
+        width: 100%;
+        height: auto;
+      }
+  
+      .cloud-img1 {
+        position: absolute;
+        z-index: -100;
+        top: -1200px;
+        right: 10%;
+        width: 400px;
+        max-width: 40%;
+        overflow: hidden;
+  
+        @include tab {
+          top: 10%;
+          right: 0;
+        }
+      }
+  
+      .cloud-img2 {
+        position: absolute;
+        z-index: -100;
+        top: -1000px;
+        left: -15%;
+        width: 500px;
+        max-width: 50%;
+  
+        @include tab {
+          top: 40%;
+          left: -10%;
+        }
+      }
+  
+      .cloud-img3 {
+        position: absolute;
+        z-index: -100;
+        top: -450px;
+        right: 10%;
+        width: 300px;
+        max-width: 35%;
+  
+        @include tab {
+          top: 80%;
+          right: -10%;
+        }
+      }
+
+    }
+
+    
   }
 }
 
@@ -495,6 +548,7 @@ header {
   .card {
     display: block;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: rgba(255, 255, 255, 1);
 
     &:hover {
       opacity: 0.7;
