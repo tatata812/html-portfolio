@@ -446,7 +446,7 @@ header {
   
         @include tab {
           top: 40%;
-          left: -10%;
+          left: 0;
         }
       }
   
@@ -460,7 +460,7 @@ header {
   
         @include tab {
           top: 80%;
-          right: -10%;
+          right: 0;
         }
       }
 

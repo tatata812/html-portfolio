@@ -6,7 +6,7 @@ $(function () {
   function loaderClose() {
     $(".loading-anime-wrap").fadeOut("slow");
   }
-  setTimeout(loaderClose, 10000);
+  setTimeout(loaderClose, 2000);
 
   //ハンバーガーメニュー
   $(".burger-btn,.sp-nav-link").on("click", function () {
@@ -95,7 +95,7 @@ var scene3 = new ScrollMagic.Scene({
   // .addIndicators({ name: 'contact' })
   .addTo(controller);
 
-if(matchMedia('(min-width: 768px)').matches){
+if(matchMedia('(min-width: 769px)').matches){
   luxy.init({
     wrapper: '#luxy',
     targets : '.luxy-el',

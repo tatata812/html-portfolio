@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: #d1f2ff;
+  background-color: #ddf5ff;
 }
 
 a {
@@ -610,7 +610,7 @@ header .sp-nav ul .sp-nav-link a {
 @media (max-width: 768px) {
   .about .about-box-right #luxy .cloud-img2 {
     top: 40%;
-    left: -10%;
+    left: 0;
   }
 }
 
@@ -626,7 +626,7 @@ header .sp-nav ul .sp-nav-link a {
 @media (max-width: 768px) {
   .about .about-box-right #luxy .cloud-img3 {
     top: 80%;
-    right: -10%;
+    right: 0;
   }
 }
 
